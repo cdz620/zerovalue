@@ -1,0 +1,12 @@
+type Request {
+	Name string `json:"name"`
+}
+
+type Response {
+	Name string `json:"name"`
+}
+
+service zerovalue-api {
+	@handler ZerovalueHandler
+	post /from (Request) returns (Response)
+}
